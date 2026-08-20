@@ -51,7 +51,7 @@ body {
     font-size: 17px;
     color: #212832;
 
-    li {
+    & li {
         color: black;
     }
 }
@@ -241,7 +241,7 @@ body {
 .category-list {
     display: flex;
     gap: 20px;
-    
+
 }
 
 .category-card {

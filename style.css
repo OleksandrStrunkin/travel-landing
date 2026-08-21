@@ -212,7 +212,8 @@ body {
 .category-section {
     margin: 0 auto;
     max-width: 1200px;
-    height: 100vh;
+
+    margin-bottom: 123px;
 }
 
 .category-label {
@@ -304,5 +305,32 @@ body {
 .selling-section {
     margin: 0 auto;
     max-width: 1200px;
-    height: 100vh;
+}
+
+.selling-label {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: #5e6282;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+
+.selling-title {
+    font-family: var(--font4);
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #14183e;
+
+    margin-bottom: 66px;
+}
+
+.selling-list {
+    display: flex;
+    justify-content: space-between;
 }

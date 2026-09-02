@@ -278,27 +278,34 @@ body {
 .category-list {
     display: flex;
     gap: 20px;
-
+    position: relative;
+    isolation: isolate;
 }
 
 .category-card {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 36px;
-    padding: 40px 25px;
+    padding: 45px 44px;
 
     position: relative;
-    isolation: isolate;
     background: #fff;
+    transition: box-shadow 0.3s ease;
 
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0), 0 8px 7px 0 rgba(0, 0, 0, 0.01), 0 20px 13px 0 rgba(0, 0, 0, 0.01), 0 39px 25px 0 rgba(0, 0, 0, 0.01), 0 65px 47px 0 rgba(0, 0, 0, 0.02), 0 100px 80px 0 rgba(0, 0, 0, 0.02);
 }
 
+.category-card:hover {
+    box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.06);
+}
+
 .category-card-icon {
     width: 100%;
-    width: 80px;
+    height: 80px;
+    object-fit: contain;
 
     margin-bottom: 30px;
 }
@@ -324,16 +331,14 @@ body {
 
 .block-category {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: -33px;
+    left: -35px;
     width: 100px;
     height: 100px;
-    border-top-left-radius: 12px;
-    border-bottom-right-radius: 6px;
-
+    border-radius: 30px 0 10px 0;
     z-index: -1;
-
     background: #DF6951;
+    transition: transform 0.3s ease;
 }
 
 /* SELLING SECTION */
@@ -659,6 +664,12 @@ body {
     width: 263px;
 }
 
+@media (max-width: 767px) {
+    .ongoing-card {
+        display: none;
+    }
+}
+
 .ongoing-card-avatar {
     width: 50px;
     height: 50px;
@@ -939,7 +950,6 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    overflow: hidden;
     z-index: 1;
 }
 
@@ -1046,10 +1056,16 @@ body {
 
 .subscribe-decor-grid {
     position: absolute;
-    bottom: -60px;
-    right: -80px;
+    bottom: -90px;
+    right: -90px;
     z-index: 0;
     pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .subscribe-decor-grid {
+            display: none;
+        }
 }
 
 /* ==========================================================================
@@ -1222,6 +1238,7 @@ body {
     padding: 40px 0 60px;
 }
 
+
 .footer-glow {
     position: absolute;
     bottom: 0;
@@ -1257,7 +1274,7 @@ body {
     }
 
     .steps-card-wrapper {
-        padding-right: 30px;
+        padding-right: 00px;
     }
 }
 
@@ -1298,6 +1315,19 @@ body {
         width: 100%;
         display: flex;
         justify-content: center;
+    }
+
+    .category-title {
+        font-size: 40px;
+        margin-bottom: 45px;
+    }
+
+    .category-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 25px;
+        max-width: 650px;
+        margin: 0 auto 80px;
     }
 
     .selling-list {
@@ -1411,9 +1441,33 @@ body {
         max-width: 420px;
     }
 
+    .category-section {
+        margin-bottom: 80px;
+    }
+
+    .category-title {
+        font-size: clamp(26px, 6vw, 36px);
+        margin-bottom: 35px;
+    }
+
     .category-list {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 40px;
+    }
+
+    .category-card {
+        max-width: 320px;
+        width: 100%;
+    }
+
+    .block-category {
+        bottom: -20px;
+        left: -20px;
+        width: 80px;
+        height: 80px;
+        border-radius: 24px 0 8px 0;
     }
 
     .testimonials-slider-wrapper {
